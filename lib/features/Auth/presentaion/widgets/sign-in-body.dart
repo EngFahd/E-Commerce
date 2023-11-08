@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:new_ecomerce/core/utils/Style.dart';
-import 'package:new_ecomerce/features/Auth/presentaion/widgets/ButtonConnctionMedia.dart';
 
 import 'package:new_ecomerce/features/Auth/presentaion/widgets/FirstSectionSign.dart';
 import 'package:new_ecomerce/features/Auth/presentaion/widgets/SecondSectionSign.dart';

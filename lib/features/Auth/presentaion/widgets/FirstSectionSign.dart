@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:new_ecomerce/core/utils/Style.dart';
+import 'package:new_ecomerce/core/utils/router.dart';
 import 'package:new_ecomerce/features/Auth/presentaion/widgets/CustemTextButton.dart';
 import 'package:new_ecomerce/features/Auth/presentaion/widgets/CutemTextFiled.dart';
 
@@ -32,13 +34,11 @@ class FirstSectionSign extends StatelessWidget {
                   const Text("Welcome,", style: Style.textStyle30),
                   const Spacer(),
                   Text("Sign",
-                      style:
-                          Style.textStyle18.copyWith(color: Colors.green))
+                      style: Style.textStyle18.copyWith(color: Colors.green))
                 ],
               ),
               const SizedBox(height: 10),
-              const Text("Sign in to Continue",
-                  style: Style.textStyle14Hint),
+              const Text("Sign in to Continue", style: Style.textStyle14Hint),
               const SizedBox(height: 48),
               const Text("Email", style: Style.textStyle14Hint),
               const CutemTextFiled(),
@@ -46,10 +46,15 @@ class FirstSectionSign extends StatelessWidget {
               const Text("Password", style: Style.textStyle14Hint),
               const CutemTextFiled(),
               const SizedBox(height: 20),
-              const Row(
+              Row(
                 children: [
-                  Spacer(),
-                  Text("Forgot Password?", style: Style.textStyle14)
+                  const Spacer(),
+                  GestureDetector(
+                      onTap: () {
+                        GoRouter.of(context).push(AppRouter.registerViwe);
+                      },
+                      child: const Text("Forgot Password?",
+                          style: Style.textStyle14))
                 ],
               ),
               const SizedBox(
@@ -63,5 +68,3 @@ class FirstSectionSign extends StatelessWidget {
     );
   }
 }
-
-
