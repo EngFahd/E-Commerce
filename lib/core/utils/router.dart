@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
-import 'package:new_ecomerce/features/Auth/presentaion/widgets/register-viwe.dart';
-import 'package:new_ecomerce/features/Auth/presentaion/widgets/signIn-viwe.dart';
+import 'package:new_ecomerce/features/Auth/presentaion/register-viwe.dart';
+import 'package:new_ecomerce/features/Auth/presentaion/signIn-viwe.dart';
 
 // GoRouter configuration
 abstract class AppRouter {
