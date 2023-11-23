@@ -15,11 +15,11 @@ class SecondSectionSign extends StatelessWidget {
         Text("-OR-", style: Style.textStyle18),
         SizedBox(height: 10),
         ButtonConnctionMedia(
-            imag: 'assets/Facebook_icon_2013.svg.png',
+            imag: 'assets/facebook.png',
             text: 'Sign In with Facebook'),
         SizedBox(height: 15),
         ButtonConnctionMedia(
-            imag: "assets/googel.png", text: 'Sign In with Googel'),
+            imag: "assets/google.png", text: 'Sign In with Googel'),
       ],
     );
   }

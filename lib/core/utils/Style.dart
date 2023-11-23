@@ -10,8 +10,8 @@ abstract class Style {
       TextStyle(fontSize: 14, fontWeight: FontWeight.normal);
   static const textStyle14Hint = TextStyle(
       fontSize: 14, fontWeight: FontWeight.normal, color: Color(0xff929292));
-  // static final textStyle18 =
-  //     TextStyle(fontSize: 18, fontWeight: FontWeight.normal);
-  // static final textStyle18 =
-  //     TextStyle(fontSize: 18, fontWeight: FontWeight.normal);
+  static const textStyle16 =
+      TextStyle(fontSize: 16, fontWeight: FontWeight.normal);
+  static const textStyle12 = TextStyle(
+      fontSize: 18, fontWeight: FontWeight.normal, color: Color(0xff929292));
 }

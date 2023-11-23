@@ -88,6 +88,14 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "10.6.0"
+  getwidget:
+    dependency: "direct main"
+    description:
+      name: getwidget
+      sha256: f98a1a96d946e640e4b5e3bd1fd692a50b53f3d1afc8c128f098139a0cf5607e
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.1.1"
   go_router:
     dependency: "direct main"
     description:
@@ -96,6 +104,14 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "12.1.0"
+  google_nav_bar:
+    dependency: "direct main"
+    description:
+      name: google_nav_bar
+      sha256: "1c8e3882fa66ee7b74c24320668276ca23affbd58f0b14a24c1e5590f4d07ab0"
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "5.0.6"
   lints:
     dependency: transitive
     description:
