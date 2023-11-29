@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:new_ecomerce/core/utils/Style.dart';
-import 'package:new_ecomerce/features/Auth/presentaion/widgets/CustemTextButton.dart';
-import 'package:new_ecomerce/features/Auth/presentaion/widgets/CutemTextFiled.dart';
+import 'package:new_ecomerce/features/Auth/presentaion/widgets/custem_button.dart';
+import 'package:new_ecomerce/features/Auth/presentaion/widgets/cutem_text_filed.dart';
 
 class RegisterBody extends StatelessWidget {
   const RegisterBody({super.key});

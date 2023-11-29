@@ -5,14 +5,15 @@ class ButtonConnctionMedia extends StatelessWidget {
   const ButtonConnctionMedia({
     super.key,
     required this.imag,
-    required this.text,
+    required this.text, this.onTap,
   });
   final String imag;
   final String text;
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap:onTap,
       child: Container(
         height: 50,
         decoration: BoxDecoration(

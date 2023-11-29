@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:new_ecomerce/core/utils/Style.dart';
-import 'package:new_ecomerce/core/widgets/button-navBar.dart';
+import 'package:new_ecomerce/core/widgets/button_navbar.dart';
 import 'package:new_ecomerce/features/home/presentaion/view/widget/HomeBestSellingListView.dart';
 import 'package:new_ecomerce/features/home/presentaion/view/widget/HomeListViewAvatar.dart';
 import 'package:new_ecomerce/features/home/presentaion/view/widget/HomeTextFeild.dart';

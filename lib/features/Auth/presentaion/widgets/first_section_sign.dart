@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:new_ecomerce/core/utils/Style.dart';
 import 'package:new_ecomerce/core/utils/router.dart';
-import 'package:new_ecomerce/features/Auth/presentaion/widgets/CustemTextButton.dart';
-import 'package:new_ecomerce/features/Auth/presentaion/widgets/CutemTextFiled.dart';
+import 'package:new_ecomerce/features/Auth/data/manage/AuthCubit/auth_cubit.dart';
+import 'package:new_ecomerce/features/Auth/presentaion/widgets/custem_button.dart';
+import 'package:new_ecomerce/features/Auth/presentaion/widgets/cutem_text_filed.dart';
 
 class FirstSectionSign extends StatelessWidget {
-  const FirstSectionSign({
+  FirstSectionSign({
     super.key,
+    // this.email,
+    // this.password,
   });
+  late String? email;
+  late String? password;
+  GlobalKey<FormState> globalKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -41,17 +48,27 @@ class FirstSectionSign extends StatelessWidget {
               const Text("Sign in to Continue", style: Style.textStyle14Hint),
               const SizedBox(height: 48),
               const Text("Email", style: Style.textStyle14Hint),
-              const CutemTextFiled(),
+              CutemTextFiled(
+                obscureText: false,
+                onChanged: (valu) {
+                  email = valu;
+                },
+              ),
               const SizedBox(height: 38),
               const Text("Password", style: Style.textStyle14Hint),
-              const CutemTextFiled(),
+              CutemTextFiled(
+                obscureText: true,
+                onChanged: (valu) {
+                  password = valu;
+                },
+              ),
               const SizedBox(height: 20),
               Row(
                 children: [
                   const Spacer(),
                   GestureDetector(
                       onTap: () {
-                        GoRouter.of(context).push(AppRouter.registerViwe);
+                        GoRouter.of(context).push(AppRouter.CartViwe);
                       },
                       child: const Text("Forgot Password?",
                           style: Style.textStyle14))
@@ -60,10 +77,27 @@ class FirstSectionSign extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const CustemTextButton()
+              CustemTextButton(
+                onPressed: () async {
+                  // if (globalKey.currentState!.validate()) {
+                  await BlocProvider.of<AuthCubit>(context)
+                      .logIn(Email: email!, Passwaord: password!);
+                  // print("sucess");
+                  // scnackBar(context, "success");
+                  // }
+                },
+              )
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  void scnackBar(BuildContext context, String message) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
       ),
     );
   }
